@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceCream selector</title>
+
+    <style>
+        
+        #div1{
+            background-color: black;
+            width: 400px;
+            height: 285px;
+            border-radius: 30px;
+            margin-left: 550px;
+            margin-top: 250px;
+            
+            
+        }
+        #hn{
+        color: red;
+        text-align: center;
+            
+        }
+        #order{
+            color: red;
+            text-align: center;
+        }
+        #output{
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            
+
+        }
+        #b1{
+            display: flex;
+            justify-content: center;
+            margin-left: 135px;
+            margin-top: 20px;
+
+        }
+        #hcyi{
+            color: red;
+            text-align: center;
+        }
+        #input1{
+            margin-left: 120px;
+        }
+        #IceCreams{
+            display: flex;
+            justify-content: center;
+            margin-left: 135px;
+            
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <div id="div1">
+        <h1 id="order">PLACE YOUR ORDER</h1>
+    <h3 id="hn">YOUR NAME</h3>
+    <input type="text" name="" id="input1">
+
+   <h3 id="hcyi">CHOOSE YOUR ICECREAM</h3>
+
+    <select name="" id="IceCreams">
+        <option value="American Nut">American Nut</option>
+        <option value="IceCream Pastry">IceCream Pastry</option>
+        <option value="Kesar Pista">Kesar Pista</option>
+        <option value="Chocolate">Chocolate</option>
+    </select>
+
+    <button id="b1">Place order</button>
+
+    <div id="output"></div>
+
+</div>
+
+
+    <script>
+
+
+        let s_tag = document.getElementById("IceCreams")
+        let d_tag = document.getElementById("output")
+        let b_tag = document.getElementById("b1")
+
+
+        b_tag.addEventListener("click", function () {
+
+            let FavouriteIceCream = document.getElementById("IceCreams").value
+            let i_tag = document.getElementById("input1").value
+            d_tag.innerHTML = `${i_tag} YOUR ORDER OF  ${FavouriteIceCream} IS PLACED`
+        })
+
+
+    </script>
+</body>
+
+</html>
